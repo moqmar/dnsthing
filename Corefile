@@ -1,0 +1,6 @@
+docker {
+  hosts /etc/coredns/docker.hosts
+}
+. {
+  forward . 1.1.1.1
+}

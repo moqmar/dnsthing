@@ -1,0 +1,7 @@
+install and configure dnsthing and coredns:
+- mkdir /etc/coredns && cp Corefile /etc/coredns
+- wget https://github.com/coredns/coredns/releases/download/v1.1.1/coredns_1.1.1_linux_amd64.tgz -qO- | tar xzf - -C /usr/local/bin
+- cp dnsthing.py /usr/local/bin/dnsthing
+- cp coredns.service dnsthing.service /etc/systemd/system/
+- systemctl enable dnsthing && systemctl start dnsthing && systemctl status dnsthing
+- systemctl enable coredns && systemctl start coredns && systemctl status dnsthing
